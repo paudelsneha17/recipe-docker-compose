@@ -17,7 +17,7 @@ describe('Recipe API Tests', () => {
     test('should return all recipes', async () => {
       const response = await request(app)
         .get('/api/recipes')
-        .expect(201);
+        .expect(200);
 
       expect(Array.isArray(response.body)).toBe(true);
       expect(response.body.length).toBeGreaterThan(0);
